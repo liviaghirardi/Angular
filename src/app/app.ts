@@ -19,14 +19,14 @@ import { CommonModule } from '@angular/common';
         </section>
 
         <section class="card">
-          <h2>Recursos Utilizados</h2>
-          <ul>
-            <li>Arquitetura baseada em Componentes Standalone</li>
-            <li>Data Binding e Programação Reativa</li>
-            <li>TypeScript e Angular CLI</li>
-            <li>Responsividade com CSS Flexbox</li>
-          </ul>
-        </section>
+        <h2>Recursos Utilizados</h2>
+        <ul>
+          <li>Arquitetura baseada em Componentes Standalone</li>
+          <li>Data Binding e Programação Reativa</li>
+          <li>TypeScript e Angular CLI</li>
+          <li>Responsividade com CSS Flexbox</li> <!-- Novo item adicionado -->
+        </ul>
+      </section>
       </main>
 
       <footer>
