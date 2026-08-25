@@ -66,5 +66,5 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class AppComponent {
-  title = 'Landing Page Interativa - Angular';
+  title = 'Landing Page Interativa - Angular'; // Alterado aqui
 }
