@@ -30,8 +30,8 @@ import { CommonModule } from '@angular/common';
       </main>
 
       <footer>
-        <p>&copy; 2026 - Aluna: Lívia Ghirardi | Projeto Concluído com Sucesso</p>
-      </footer>
+      <p>&copy; 2026 - Aluna: Lívia Ghirardi | Projeto Concluído com Sucesso</p>
+    </footer>
     </div>
   `,
   styles: [`
