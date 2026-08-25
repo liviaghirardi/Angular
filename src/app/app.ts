@@ -24,12 +24,13 @@ import { CommonModule } from '@angular/common';
             <li>Arquitetura baseada em Componentes Standalone</li>
             <li>Data Binding e Programação Reativa</li>
             <li>TypeScript e Angular CLI</li>
+            <li>Responsividade com CSS Flexbox</li>
           </ul>
         </section>
       </main>
 
       <footer>
-        <p>&copy; 2026 - Aluna: Lívia Ghirardi</p>
+        <p>&copy; 2026 - Aluna: Lívia Ghirardi | Projeto Concluído com Sucesso</p>
       </footer>
     </div>
   `,
@@ -44,7 +45,7 @@ import { CommonModule } from '@angular/common';
     header {
       text-align: center;
       margin-bottom: 30px;
-      background-color: #e30613;
+      background-color: #0056b3;
       color: white;
       padding: 20px;
       border-radius: 8px;
@@ -65,5 +66,5 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class AppComponent {
-  title = 'Minha Landing Page - Angular';
+  title = 'Landing Page Interativa - Angular';
 }
