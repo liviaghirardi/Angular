@@ -1,0 +1,10 @@
+footer {
+  border-top: 1px solid var(--borda);
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+p {
+  margin: 0;
+}

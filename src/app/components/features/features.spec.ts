@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Features } from './features';
+import { RECURSOS } from '../../data/recursos';
 
 describe('Features', () => {
   let component: Features;
@@ -15,7 +16,12 @@ describe('Features', () => {
     await fixture.whenStable();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should list all resources by default', () => {
+    expect(component.filtrados().length).toBe(RECURSOS.length);
+  });
+
+  it('should filter resources by category', () => {
+    component.selecionar('Ferramentas');
+    expect(component.filtrados().every((r) => r.categoria === 'Ferramentas')).toBe(true);
   });
 });

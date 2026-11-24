@@ -1,0 +1,49 @@
+.recursos {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+h2 {
+  margin: 0 0 20px;
+  color: var(--texto-forte);
+  font-size: 1.6rem;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filtros button {
+  font: inherit;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--borda);
+  background: var(--cartao);
+  color: var(--texto);
+  cursor: pointer;
+}
+
+.filtros button:hover {
+  color: var(--texto-forte);
+}
+
+.filtros button.ativo {
+  background: var(--destaque);
+  border-color: var(--destaque);
+  color: #fff;
+}
+
+.contador {
+  margin: 14px 0 18px;
+  font-size: 0.9rem;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  align-items: start;
+}

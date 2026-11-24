@@ -1,59 +1,46 @@
-# MeuAppAngular
+# Recursos do Angular — Projeto 03
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.5.
+Projeto Angular da atividade **Projetos com Frameworks Front-end (Aula 03)** da disciplina **Frameworks Front-end (SENAI)**.
 
-## Development server
+A página apresenta os principais recursos do Angular. O usuário filtra os recursos por categoria e abre cada card para ver uma explicação e um exemplo de código.
 
-To start a local development server, run:
+- **Aplicação online:** https://angular-snowy-three.vercel.app/
 
-```bash
-ng serve
-```
+## Prints
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![Página inicial](prints/pagina-inicial.png)
 
-## Code scaffolding
+![Filtro por categoria e card aberto](prints/filtro-e-detalhes.png)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Componentes
 
-```bash
-ng generate component component-name
-```
+| Componente | Função |
+|------------|--------|
+| `App` | Componente raiz que monta a página |
+| `Navbar` | Barra de navegação fixa no topo |
+| `Hero` | Título e subtítulo, recebidos do `App` por `input()` |
+| `Features` | Filtro por categoria e lista de recursos |
+| `RecursoCard` | Card de cada recurso; avisa o `Features` por `output()` quando é aberto |
+| `Cta` | Chamada para começar um projeto, com os comandos do Angular CLI |
+| `Footer` | Rodapé |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Os dados ficam em `src/app/data/recursos.ts`.
 
-```bash
-ng generate --help
-```
+## Conceitos utilizados
 
-## Building
+- **Componentes standalone**, cada um com seus arquivos `.ts`, `.html` e `.css`
+- **`input()` e `output()`** para a comunicação entre componentes pai e filho
+- **Signals** (`signal`, `computed`) para o filtro e o card aberto, sem `zone.js`
+- **Controle de fluxo** com `@for`, `@if` e `@empty`
+- **Data binding**: interpolação `{{ }}`, property binding `[ ]` e event binding `( )`
+- **TypeScript** com interfaces (`Recurso`, `Categoria`)
+- **Testes** com Vitest (`ng test`)
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Como executar
 
 ```bash
-ng test
+npm install
+npm start
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Acesse `http://localhost:4200`. Para gerar a versão de produção: `npm run build`.

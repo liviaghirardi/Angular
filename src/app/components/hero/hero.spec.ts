@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Hero } from './hero';
 
 describe('Hero', () => {
-  let component: Hero;
   let fixture: ComponentFixture<Hero>;
 
   beforeEach(async () => {
@@ -11,11 +10,12 @@ describe('Hero', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(Hero);
-    component = fixture.componentInstance;
+    fixture.componentRef.setInput('titulo', 'Título de teste');
     await fixture.whenStable();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should render the title input', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Título de teste');
   });
 });

@@ -1,0 +1,16 @@
+<article class="card" [class.aberto]="aberto()">
+  <span class="categoria">{{ recurso().categoria }}</span>
+  <h3>{{ recurso().titulo }}</h3>
+  <p>{{ recurso().resumo }}</p>
+
+  @if (aberto()) {
+    <div class="detalhe">
+      <p>{{ recurso().detalhe }}</p>
+      <code>{{ recurso().exemplo }}</code>
+    </div>
+  }
+
+  <button (click)="alternar.emit(recurso())">
+    {{ aberto() ? 'Fechar ↑' : 'Ver detalhes →' }}
+  </button>
+</article>

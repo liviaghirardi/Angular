@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-navbar',
-  styleUrl: './navbar.css',
+  imports: [],
   templateUrl: './navbar.html',
+  styleUrl: './navbar.css',
 })
-export class Navbar {}
+export class Navbar {
+  links = [
+    { texto: 'Recursos', ancora: '#recursos' },
+    { texto: 'Começar', ancora: '#comecar' },
+  ];
+}

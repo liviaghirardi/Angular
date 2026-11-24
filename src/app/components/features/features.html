@@ -1,1 +1,28 @@
-<p>features works!</p>
+<section class="recursos" id="recursos">
+  <h2>Explore os recursos</h2>
+
+  <div class="filtros">
+    <button [class.ativo]="filtro() === null" (click)="selecionar(null)">Todos</button>
+    @for (categoria of categorias; track categoria) {
+      <button [class.ativo]="filtro() === categoria" (click)="selecionar(categoria)">
+        {{ categoria }}
+      </button>
+    }
+  </div>
+
+  <p class="contador">
+    {{ filtrados().length }} {{ filtrados().length === 1 ? 'recurso' : 'recursos' }}
+  </p>
+
+  <div class="grade">
+    @for (recurso of filtrados(); track recurso.id) {
+      <app-recurso-card
+        [recurso]="recurso"
+        [aberto]="aberto() === recurso.id"
+        (alternar)="alternar($event)"
+      />
+    } @empty {
+      <p>Nenhum recurso nesta categoria.</p>
+    }
+  </div>
+</section>

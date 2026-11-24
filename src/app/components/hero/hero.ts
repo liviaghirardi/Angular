@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-hero',
-  styleUrl: './hero.css',
+  imports: [],
   templateUrl: './hero.html',
+  styleUrl: './hero.css',
 })
-export class Hero {}
+export class Hero {
+  // Dados recebidos do componente pai (App)
+  titulo = input.required<string>();
+  subtitulo = input('');
+}
